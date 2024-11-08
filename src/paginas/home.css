@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+.parte-arriba {
+  display: flex;
+  align-items: center;                  
+  justify-content: space-between; /* Esto separa el logo y los botones en los extremos */
+  padding: 0 20px; /* Añade padding para que haya espacio en los bordes */
+  box-shadow: 0px 10px 20px #a0002a;
+}
+  
+
+.milogo{
+  margin-left: 10%;
+   width: 300px;
+   height: auto;
+}
+.botones {
+  display: flex;
+  gap: 30%;
+  margin-right: 25%;
+  
+}
+.botones button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a0002a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.botones button:hover {
+  background-color: goldenrod;
+}
+
+.botones button:active {
+  transform: scale(0.95);
+}
