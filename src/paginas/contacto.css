@@ -1,0 +1,129 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Parte superior con el logo y los botones */
+  .parte-arriba {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0px 10px 20px #a0002a;
+  }
+
+  .milogo {
+    margin-left: 100%;
+    width: 200px;
+    height: auto;
+  }
+
+  .botones {
+    display: flex;
+    gap: 30%;
+    margin-right: 25%;
+  }
+
+  .botones button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a0002a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
+  }
+
+  .botones button:hover {
+    background-color: goldenrod;
+    color: black;
+    font-size: 22px;
+  }
+
+  .botones button:active {
+    transform: scale(0.95);
+
+  }
+
+  /* Contenido principal */
+  .comentarios {
+    margin-top: 55px;
+    margin-bottom: 20px;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .lema {
+    color: #a0002a;
+  }
+
+  /* Formulario */
+  .formulario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  form label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  form button.send {
+    padding: 12px 25px;
+    background-color: #a0002a;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  form button.send:hover {
+    background-color: goldenrod;
+    color: black;
+  }
+
+  form button.send:active {
+    transform: scale(0.95);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 20px;
+    border-top: 2px solid #a0002a;
+  }
+
+  .logofooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6%;
+  }
+
+  .milogofooter {
+    width: 10%;
+  }
