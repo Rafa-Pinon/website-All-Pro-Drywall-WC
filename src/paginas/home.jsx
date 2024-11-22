@@ -4,12 +4,11 @@ import logo from "../assets/img/logo.png";
 import "./home.css";
 import ImageSlider from "../componentes/imagenes";
 import Footer from "../componentes/Footer";
-
 function Home() {
   const navigate = useNavigate();
 
   const navigateTo = (path) => {
-    navigate(path); // Navega a la ruta especificada
+    navigate(path);
   };
 
   return (
@@ -58,7 +57,6 @@ function Home() {
           <ImageSlider />
         </div>
       </div>
-
       <Footer />
     </div>
   );
