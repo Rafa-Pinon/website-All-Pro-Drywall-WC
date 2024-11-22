@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 import "./home.css";
 import ImageSlider from "../componentes/imagenes";
+import Footer from "../componentes/Footer";
 
 function Home() {
   const navigate = useNavigate();
@@ -57,37 +58,8 @@ function Home() {
           <ImageSlider />
         </div>
       </div>
-      <div className="footer">
-        <div className="logofooter">
-          <img src={logo} alt="Logo" className="milogofooter" />
-        </div>
-        <div className="botonesfooter">
-          <div className="btncontactocaja">
-            <button
-              className="btncontacto"
-              onClick={() => navigateTo("/contacto")}
-            >
-              Contacto
-            </button>
-          </div>
-          <div className="btnservicioscaja">
-            <button
-              className="btnservicio"
-              onClick={() => navigateTo("/servicios")}
-            >
-              Servicios
-            </button>
-          </div>
-          <div className="btnproyectoscaja">
-            <button
-              className="btnproyectos"
-              onClick={() => navigateTo("/proyectos")}
-            >
-              Proyectos
-            </button>
-          </div>
-        </div>
-      </div>
+
+      <Footer />
     </div>
   );
 }
