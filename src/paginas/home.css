@@ -39,12 +39,6 @@ body {
 
 .botones button:hover {
   background-color: goldenrod;
-<<<<<<< HEAD
-  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
-}
-
-
-=======
   color: black;
   /* font-size: larger; */
   font-size: 22px;
@@ -129,4 +123,3 @@ h1, h2 {
   text-align: center;
   margin-top: -3%;
  }
->>>>>>> 8a13d346b92419383b7e9549eb86e54a093a3f79
