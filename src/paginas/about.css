@@ -51,18 +51,24 @@ body, html {
 .about-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: stretch;
-  box-sizing: border-box;
+  align-items: center;
 }
-
 
 .about-text {
   width: 50%;
   padding-right: 20px;
 }
+
+.dos {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 
 
 .about-text h1 {
@@ -106,3 +112,4 @@ body, html {
 .logo img {
   height: 70px;
 }
+

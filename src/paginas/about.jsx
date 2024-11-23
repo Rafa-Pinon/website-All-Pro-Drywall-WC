@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../componentes/Footer";
 import logo from "../assets/img/logo.png";
+import dos from "../assets/imagenes/dos.jpg";
 import "./About.css";
 
 const About = () => {
@@ -11,6 +12,9 @@ const About = () => {
     navigate("/");
   };
 
+  const navigateToContacto = () => {
+    navigate("/contacto");
+  };
   const navigateToProyectos = () => {
     navigate("/proyectos");
   };
@@ -36,10 +40,12 @@ const About = () => {
           <button className="btnproyectos" onClick={navigateToProyectos}>
             Proyectos
           </button>
+          <button className="btncontacto" onClick={navigateToContacto}>
+            Contact Us
+          </button>
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="centro">
         <div className="about-container">
           <div className="about-text">
@@ -73,11 +79,7 @@ const About = () => {
           </div>
 
           <div className="about-image">
-            <img
-              src="/ruta/de/la/imagen.jpg"
-              alt="Equipo"
-              className="about-photo"
-            />
+            <img src={dos} alt="Dos" className="dos" />
           </div>
         </div>
       </div>
