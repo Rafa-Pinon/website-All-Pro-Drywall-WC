@@ -1,0 +1,134 @@
+/* Estilos del encabezado */
+.parte-arriba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.milogo {
+  width: 150px;
+  height: auto;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.botones button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #a0002a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botones button:hover {
+  background-color: goldenrod;
+}
+
+/* Estilos de la sección de servicios */
+.servicios-container {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.servicios-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.servicios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.servicio-item {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
+.row-normal {
+  flex-direction: row;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.servicio-imagen {
+  width: 48%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: auto;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.servicio-texto {
+  width: 48%;
+  text-align: justify;
+}
+
+.servicio-texto h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.servicio-texto p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .servicio-item {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .servicio-imagen, .servicio-texto {
+    width: 100%;
+  }
+}
+
+
+.quality-section {
+  padding: 3rem;
+  background-color: #f9f9f9;
+  margin-top: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  line-height: 1.8;
+}
+
+.quality-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+.quality-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.quality-section p strong {
+  color: #a0002a;
+}

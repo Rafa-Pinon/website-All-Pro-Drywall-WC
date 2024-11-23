@@ -34,6 +34,11 @@ function Home() {
               Servicios
             </button>
           </div>
+          <div className="btnaboutcajah">
+            <button className="btnabout" onClick={() => navigateTo("/about")}>
+              about
+            </button>
+          </div>
           <div className="btnproyectoscajah">
             <button
               className="btnproyectos"
