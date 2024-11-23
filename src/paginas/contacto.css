@@ -1,4 +1,4 @@
-/* General */
+
 .todo {
   font-family: Arial, sans-serif;
   min-height: 100vh;
@@ -10,7 +10,7 @@
   overflow-y: auto;
 }
 
-/* Header */
+
 .parte-arriba {
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@
   background-color: goldenrod;
 }
 
-/* Main Content */
+
 .centro {
   display: flex;
   flex-direction: column;
@@ -97,7 +97,7 @@ form button.send:active {
   transform: scale(0.95);
 }
 
-/* Footer */
+
 .footer {
   margin-top: 30px;
   background-color: #333;
