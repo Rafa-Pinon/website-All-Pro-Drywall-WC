@@ -1,52 +1,89 @@
-.servicios-container {
+/* Estilos del encabezado */
+.parte-arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .milogo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .botones {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .botones button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #a0002a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .botones button:hover {
+    background-color: goldenrod;
+  }
+  
+  /* Estilos de la sección de servicios */
+  .servicios-container {
     padding: 2rem;
   }
-
+  
   .servicios-title {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
     color: #333;
   }
-
+  
   .servicios-list {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
-
+  
   .servicio-item {
     display: flex;
     align-items: center;
     gap: 1rem;
   }
-
+  
   .row-normal {
     flex-direction: row;
   }
-
+  
   .row-reverse {
     flex-direction: row-reverse;
   }
-
+  
   .servicio-imagen {
     width: 40%;
     border-radius: 8px;
     object-fit: cover;
     height: auto;
   }
-
+  
   .servicio-texto {
     width: 50%;
     text-align: justify;
   }
-
+  
   .servicio-texto h2 {
     margin-bottom: 1rem;
     color: #555;
   }
-
+  
   .servicio-texto p {
     font-size: 1rem;
     color: #666;
   }
+  
