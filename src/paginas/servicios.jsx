@@ -3,6 +3,10 @@ import { useNavigate } from "react-router-dom";
 import "./Servicios.css";
 import logo from "../assets/img/logo.png";
 import Footer from "../componentes/Footer";
+import uno from "../assets/imagenes/uno.jpg";
+import dos from "../assets/imagenes/dos.jpg";
+import tres from "../assets/imagenes/tres.jpg";
+import cuatro from "../assets/imagenes/cuatro.jpg";
 const Servicios = () => {
   const navigate = useNavigate();
 
@@ -14,8 +18,8 @@ const Servicios = () => {
     navigate("/proyectos");
   };
   //despues que cree el about lo voy a cambiar a about
-  const navigateToServicios = () => {
-    navigate("/servicios");
+  const navigateToAbout = () => {
+    navigate("/about");
   };
 
   const servicios = [
@@ -23,19 +27,25 @@ const Servicios = () => {
       id: 1,
       titulo: "Servicio 1",
       descripcion: "Descripción detallada del servicio 1.",
-      imagen: "../imagenes/cuatro.jpg",
+      imagen: uno,
     },
     {
       id: 2,
       titulo: "Servicio 2",
       descripcion: "Descripción detallada del servicio 2.",
-      imagen: "/ruta/a/imagen2.jpg",
+      imagen: dos,
     },
     {
       id: 3,
       titulo: "Servicio 3",
       descripcion: "Descripción detallada del servicio 3.",
-      imagen: "/ruta/a/imagen3.jpg",
+      imagen: tres,
+    },
+    {
+      id: 4,
+      titulo: "Servicio 4",
+      descripcion: "Descripción detallada del servicio 3.",
+      imagen: cuatro,
     },
   ];
 
@@ -50,8 +60,8 @@ const Servicios = () => {
           <button className="btncontacto" onClick={navigateHome}>
             Home
           </button>
-          <button className="btnservicio" onClick={navigateToServicios}>
-            Servicios
+          <button className="btnservicio" onClick={navigateToAbout}>
+            About
           </button>
           <button className="btnproyectos" onClick={navigateToProyectos}>
             Proyectos
@@ -61,7 +71,7 @@ const Servicios = () => {
 
       {/* Sección de servicios */}
       <div className="servicios-container">
-        <h1 className="servicios-title">Nuestros Servicios</h1>
+        <h1 className="servicios-title">Our Services</h1>
         <div className="servicios-list">
           {servicios.map((servicio, index) => (
             <div
