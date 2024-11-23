@@ -50,34 +50,72 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  flex: 1;
+  padding: 20px;
+  gap: 30px;
+}
+
+/* Text Section */
+.comentarios {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.comentarios {
-  margin-bottom: 30px;
+.comentarios h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
 }
 
-form {
+.comentarios h2 {
+  font-size: 20px;
+  color: #666;
+}
+
+/* Form Styles */
+.formulario-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto;
+  gap: 20px;
+  max-width: 400px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f4f4f4, #ffffff);
+  border: 2px solid #a0002a;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  align-self: flex-start; /* Mueve el formulario a la izquierda */
 }
 
-form input,
-form textarea {
-  padding: 10px;
+.formulario-container label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.formulario-container input,
+.formulario-container textarea {
+  padding: 15px;
   border-radius: 8px;
   border: 1px solid #ddd;
   font-size: 16px;
-  box-sizing: border-box;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-form button.send {
-  padding: 12px 25px;
+.formulario-container input:focus,
+.formulario-container textarea:focus {
+  border-color: #a0002a;
+  box-shadow: 0 0 8px rgba(160, 0, 42, 0.3);
+  outline: none;
+}
+
+.formulario-container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formulario-container .send {
+  align-self: flex-start; /* Botón alineado a la izquierda */
+  padding: 12px 30px;
   background-color: #a0002a;
   color: white;
   font-size: 18px;
@@ -88,11 +126,11 @@ form button.send {
   box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
 }
 
-form button.send:hover {
+.formulario-container .send:hover {
   background-color: goldenrod;
   color: black;
 }
 
-form button.send:active {
+.formulario-container .send:active {
   transform: scale(0.95);
 }
