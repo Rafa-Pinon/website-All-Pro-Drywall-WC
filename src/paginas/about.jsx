@@ -1,6 +1,7 @@
 import React from "react";
-import "./About.css";
 import Footer from "../componentes/Footer";
+import "./About.css";
+
 const About = () => {
   return (
     <div className="about-container">
