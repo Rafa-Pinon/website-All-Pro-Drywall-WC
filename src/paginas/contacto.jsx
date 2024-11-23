@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 import "./contacto.css";
-
+import Footer from "../componentes/Footer";
 function Contacto() {
   const navigate = useNavigate();
 
@@ -103,37 +103,7 @@ function Contacto() {
           </button>
         </form>
       </div>
-
-      {/* Footer */}
-      <div className="footer">
-        <div className="mapa-contacto">
-          {/* Mapa de Google Maps */}
-          <div className="mapa">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12630.883660218027!2d-97.10806549757399!3d32.76911927235505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e820a65b8b75f%3A0x6e7a4a3c72a5489d!2sArlington%2C%20TX%2C%20USA!5e0!3m2!1sen!2smx!4v1697043445366!5m2!1sen!2smx"
-              width="100%"
-              height="300"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              title="Ubicación"
-            ></iframe>
-          </div>
-
-          {/* Ubicación y Contacto */}
-          <div className="informacion">
-            <div className="ubicacion">
-              <h3>Ubicación</h3>
-              <p>Arlington, TX, USA</p>
-            </div>
-            <div className="contacto">
-              <h3>Contacto</h3>
-              <p>Teléfono: +1 (123) 456-7890</p>
-              <p>Email: contacto@allprodrywall.com</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }
