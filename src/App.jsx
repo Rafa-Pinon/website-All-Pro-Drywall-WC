@@ -5,7 +5,7 @@ import Contacto from "./paginas/contacto";
 import Servicios from "./paginas/servicios";
 import Proyectos from "./paginas/proyectos";
 import About from "./paginas/about";
-import "./App.css";
+import "../src/styles/App.css";
 
 function App() {
   return (

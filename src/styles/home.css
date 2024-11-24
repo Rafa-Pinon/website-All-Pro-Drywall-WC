@@ -1,0 +1,72 @@
+.todo {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.parte-arriba {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.milogo {
+  width: 150px;
+}
+
+.botones {
+  display: flex;
+  gap: 15px;
+}
+
+.botones button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #a0002a;
+  color: white;
+  font-weight: bold;
+}
+
+.botones button:hover {
+  background-color: goldenrod;
+  color: black;
+}
+
+.centro {
+  flex: 1;
+  text-align: center;
+}
+
+.lema {
+  color: #a0002a;
+  margin: 20px 0;
+}
+
+.componentedeimagenes {
+  margin: 20px auto;
+}
+
+.imagenes img {
+  width: 70%;
+  height: auto;
+  max-height: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+.mission-statement {
+  padding: 20px;
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission-statement h2 {
+  color: #a0002a;
+  margin-bottom: 20px;
+}
