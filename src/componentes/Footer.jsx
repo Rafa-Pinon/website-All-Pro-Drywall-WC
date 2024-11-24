@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "../styles/Footer.css";
 
 const Footer = () => {
   return (
@@ -15,10 +15,10 @@ const Footer = () => {
         ></iframe>
       </div>
       <div className="info-container">
-        <h4>Ubicación</h4>
+        <h4>Location</h4>
         <p>123 Calle Ejemplo, Ciudad, País</p>
-        <h4>Contacto</h4>
-        <p>Teléfono: +1 234 567 890</p>
+        <h4>Contact</h4>
+        <p>Phone: +1 234 567 890</p>
         <p>Email: ejemplo@dominio.com</p>
       </div>
     </footer>
