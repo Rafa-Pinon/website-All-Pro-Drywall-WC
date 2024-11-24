@@ -1,36 +1,25 @@
-// Home.jsx
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import logo from "../assets/img/logo.png";
-import "../styles/home.css";
-import ImageSlider from "../componentes/imagenes";
+import Header from "../componentes/Header";
 import Footer from "../componentes/Footer";
+import ImageSlider from "../componentes/imagenes";
+import "../styles/home.css";
 
 function Home() {
-  const navigate = useNavigate();
-
   return (
-    <div className="todo">
-      <header className="parte-arriba">
-        <img src={logo} alt="Logo" className="milogo" />
-        <nav className="botones">
-          <button onClick={() => navigate("/contacto")}>Contacto</button>
-          <button onClick={() => navigate("/servicios")}>Servicios</button>
-          <button onClick={() => navigate("/about")}>About</button>
-          <button onClick={() => navigate("/proyectos")}>Proyectos</button>
-        </nav>
-      </header>
-
-      <main className="centro">
-        <h1>ALL Pro Drywall</h1>
-        <h2 className="lema">
-          "Passion for details, commitment to excellence"
-        </h2>
-        <div className="componentedeimagenes">
+    <div className="home-container">
+      <Header />
+      <main>
+        <section className="welcome">
+          <h1 className="company-name">All-Pro Drywall LLC</h1>
+          <h2 className="company-motto">
+            "Building quality and trust in every wall."
+          </h2>
+        </section>
+        <section className="slider">
           <ImageSlider />
-        </div>
-        <section className="mission-statement">
-          <h2>Mission Statement of All-Pro Drywall LLC</h2>
+        </section>
+        <section className="mission">
+          <h2>Our Mission</h2>
           <p>
             At All-Pro Drywall LLC, our mission is to deliver exceptional
             quality and unparalleled customer service in every project we
@@ -53,7 +42,6 @@ function Home() {
           </p>
         </section>
       </main>
-
       <Footer />
     </div>
   );
