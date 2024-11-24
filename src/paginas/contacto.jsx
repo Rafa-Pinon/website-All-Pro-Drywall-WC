@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/img/logo.png";
 import "./contacto.css";
 import Footer from "../componentes/Footer";
+import Header from "../componentes/Header";
 function Contacto() {
   const navigate = useNavigate();
 
@@ -38,24 +39,7 @@ function Contacto() {
 
   return (
     <div className="todo">
-      {/* Header */}
-      <div className="parte-arriba">
-        <div className="logo">
-          <img src={logo} alt="Logo" className="milogo" />
-        </div>
-        <div className="botones">
-          <button className="btncontacto" onClick={navigateHome}>
-            Home
-          </button>
-          <button className="btnservicio" onClick={navigateToServicios}>
-            Servicios
-          </button>
-          <button className="btnproyectos" onClick={navigateToProyectos}>
-            Proyectos
-          </button>
-        </div>
-      </div>
-
+      <Header />
       {/* Main Content */}
       <div className="centro">
         <div className="comentarios">
