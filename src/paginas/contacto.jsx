@@ -28,14 +28,14 @@ function Contacto() {
   return (
     <div className="todo">
       <Header />
-      {/* Main Content */}
       <div className="centro">
         <div className="comentarios">
           <h1>Contact Us</h1>
-          <h2>"Estamos aquí para ayudarte."</h2>
+          <div className="highlight">
+            <h2>"What can we build for you"</h2>
+          </div>
         </div>
 
-        {/* Contact Form */}
         <form
           name="contacto"
           method="POST"
@@ -45,13 +45,13 @@ function Contacto() {
         >
           <input type="hidden" name="form-name" value="contacto" />
           <div>
-            <label>Nombre:</label>
+            <label>Name:</label>
             <input
               type="text"
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
-              placeholder="Ingresa tu nombre"
+              placeholder="Enter your name"
             />
           </div>
           <div>
@@ -61,20 +61,20 @@ function Contacto() {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="Ingresa tu correo electrónico"
+              placeholder="Enter your email address"
             />
           </div>
           <div>
-            <label>Mensaje:</label>
+            <label>Message:</label>
             <textarea
               name="mensaje"
               value={formData.mensaje}
               onChange={handleChange}
-              placeholder="Escribe tu mensaje aquí"
+              placeholder="Write your message here"
             ></textarea>
           </div>
           <button className="send" type="submit">
-            Enviar
+            Send
           </button>
         </form>
       </div>

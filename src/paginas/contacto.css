@@ -23,9 +23,6 @@
   transition: background-color 0.3s;
 }
 
-
-
-
 .centro {
   display: flex;
   flex-direction: column;
@@ -47,14 +44,9 @@
   margin-bottom: 10px;
   color: #a0002a;
   text-transform: uppercase;
-}
-
-.comentarios h2 {
-  font-size: 20px;
-  color: #666;
+  padding-top: 50px;
   font-style: italic;
 }
-
 
 .formulario-container {
   display: flex;
@@ -106,17 +98,36 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: color 0.3s, border-bottom-color 0.3s, transform 0.2s;
   box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2);
   width: 100%;
   margin-top: 20px;
+  border-bottom: 2px solid transparent;
 }
 
 .formulario-container .send:hover {
-  background-color: goldenrod;
-  color: black;
+  border-bottom-color: #a0002a;
+  color: #a0002a;
+  background-color: white;
 }
 
 .formulario-container .send:active {
   transform: scale(0.95);
+}
+
+.highlight {
+  width: 100vw;
+  background-color: #a0002a;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  box-shadow: 0px 4px 10px rgba(160, 0, 42, 0.3);
+  font-style: italic;
+  position: relative;
+  left: 0;
+  top: 0;
 }
