@@ -1,31 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Servicios.css"; // Asegúrate de que el archivo CSS esté en el mismo directorio
-import logo from "../assets/img/logo.png";
+import "./Servicios.css";
 import Footer from "../componentes/Footer";
 import dh from "../assets/imagenes/dh.jpeg";
 import tab from "../assets/imagenes/tab.jpeg";
 import ml from "../assets/imagenes/ml.jpeg";
 import texture from "../assets/imagenes/texture.jpg";
+import Header from "../componentes/Header";
 
 const Servicios = () => {
   const navigate = useNavigate();
-
-  const navigateHome = () => {
-    navigate("/");
-  };
-
-  const navigateToProyectos = () => {
-    navigate("/proyectos");
-  };
-
-  const navigateToAbout = () => {
-    navigate("/about");
-  };
-
-  const navigateToContacto = () => {
-    navigate("/contacto");
-  };
 
   const servicios = [
     {
@@ -60,28 +44,7 @@ const Servicios = () => {
 
   return (
     <div>
-      {/* Encabezado */}
-      <div className="parte-arriba">
-        <div className="logo">
-          <img src={logo} alt="Logo" className="milogo" />
-        </div>
-        <div className="botones">
-          <button className="btncontacto" onClick={navigateHome}>
-            Home
-          </button>
-          <button className="btnservicio" onClick={navigateToAbout}>
-            About
-          </button>
-          <button className="btnproyectos" onClick={navigateToProyectos}>
-            Proyectos
-          </button>
-          <button className="btncontacto" onClick={navigateToContacto}>
-            Contact Us
-          </button>
-        </div>
-      </div>
-
-      {/* Sección de servicios */}
+      <Header />
       <div className="servicios-container">
         <h1 className="servicios-title">Our Services</h1>
         <div className="servicios-list">
