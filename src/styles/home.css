@@ -5,13 +5,13 @@ html, body {
   overflow-y: auto;
 }
 
-/* .home-container {
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   width: 100%;
-} */
+}
 
 
 main {
@@ -20,11 +20,6 @@ main {
   width: 100%;
   text-align: center;
 }
-
-/* .welcome {
-  margin: 40px 0;
-} */
-
 .company-name {
   font-size: 2.8rem;
   color: #a0002a;
@@ -37,7 +32,6 @@ main {
   margin-top: 10px;
   font-style: italic;
 }
-
 
 .mission {
   padding: 20px;

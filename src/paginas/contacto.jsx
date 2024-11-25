@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/img/logo.png";
 import "./contacto.css";
 import Footer from "../componentes/Footer";
+import Header from "../componentes/Header";
+
 function Contacto() {
   const navigate = useNavigate();
 
@@ -24,46 +25,17 @@ function Contacto() {
     console.log(formData);
   };
 
-  const navigateHome = () => {
-    navigate("/");
-  };
-
-  const navigateToProyectos = () => {
-    navigate("/proyectos");
-  };
-
-  const navigateToServicios = () => {
-    navigate("/servicios");
-  };
-
   return (
     <div className="todo">
-      {/* Header */}
-      <div className="parte-arriba">
-        <div className="logo">
-          <img src={logo} alt="Logo" className="milogo" />
-        </div>
-        <div className="botones">
-          <button className="btncontacto" onClick={navigateHome}>
-            Home
-          </button>
-          <button className="btnservicio" onClick={navigateToServicios}>
-            Servicios
-          </button>
-          <button className="btnproyectos" onClick={navigateToProyectos}>
-            Proyectos
-          </button>
-        </div>
-      </div>
-
-      {/* Main Content */}
+      <Header />
       <div className="centro">
         <div className="comentarios">
           <h1>Contact Us</h1>
-          <h2 className="lema">"Estamos aquí para ayudarte."</h2>
+          <div className="highlight">
+            <h2>"What can we build for you"</h2>
+          </div>
         </div>
 
-        {/* Contact Form */}
         <form
           name="contacto"
           method="POST"
@@ -73,12 +45,13 @@ function Contacto() {
         >
           <input type="hidden" name="form-name" value="contacto" />
           <div>
-            <label>Nombre:</label>
+            <label>Name:</label>
             <input
               type="text"
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
+              placeholder="Enter your name"
             />
           </div>
           <div>
@@ -88,18 +61,20 @@ function Contacto() {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="Enter your email address"
             />
           </div>
           <div>
-            <label>Mensaje:</label>
+            <label>Message:</label>
             <textarea
               name="mensaje"
               value={formData.mensaje}
               onChange={handleChange}
+              placeholder="Write your message here"
             ></textarea>
           </div>
           <button className="send" type="submit">
-            Enviar
+            Send
           </button>
         </form>
       </div>

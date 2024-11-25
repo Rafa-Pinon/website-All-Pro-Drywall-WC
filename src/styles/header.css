@@ -22,17 +22,17 @@
   display: flex;
   gap: 15px;
 }
-
 .nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
+  transition: color 0.3s, border-bottom-color 0.3s;
+  border-bottom: 2px solid transparent;
 }
 
 .nav a:hover {
-  background-color: #a0002a;
-  color: white;
+  border-bottom-color: #a0002a;
+  color: #a0002a;
 }
