@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Footer from "../componentes/Footer";
 import logo from "../assets/img/logo.png";
 import dos from "../assets/imagenes/dos.jpg";
-import "./About.css";
+import "./about.css";
 
 const About = () => {
   const navigate = useNavigate();
