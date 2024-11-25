@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/img/logo.png";
 import "./contacto.css";
 import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
+
 function Contacto() {
   const navigate = useNavigate();
 
@@ -25,18 +25,6 @@ function Contacto() {
     console.log(formData);
   };
 
-  const navigateHome = () => {
-    navigate("/");
-  };
-
-  const navigateToProyectos = () => {
-    navigate("/proyectos");
-  };
-
-  const navigateToServicios = () => {
-    navigate("/servicios");
-  };
-
   return (
     <div className="todo">
       <Header />
@@ -44,7 +32,7 @@ function Contacto() {
       <div className="centro">
         <div className="comentarios">
           <h1>Contact Us</h1>
-          <h2 className="lema">"Estamos aquí para ayudarte."</h2>
+          <h2>"Estamos aquí para ayudarte."</h2>
         </div>
 
         {/* Contact Form */}
@@ -63,6 +51,7 @@ function Contacto() {
               name="nombre"
               value={formData.nombre}
               onChange={handleChange}
+              placeholder="Ingresa tu nombre"
             />
           </div>
           <div>
@@ -72,6 +61,7 @@ function Contacto() {
               name="email"
               value={formData.email}
               onChange={handleChange}
+              placeholder="Ingresa tu correo electrónico"
             />
           </div>
           <div>
@@ -80,6 +70,7 @@ function Contacto() {
               name="mensaje"
               value={formData.mensaje}
               onChange={handleChange}
+              placeholder="Escribe tu mensaje aquí"
             ></textarea>
           </div>
           <button className="send" type="submit">
