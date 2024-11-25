@@ -8,10 +8,10 @@ function Header() {
 
   const navLinks = [
     { path: "/", label: "Home" },
-    { path: "/contacto", label: "Contacto" },
-    { path: "/servicios", label: "Servicios" },
+    { path: "/contacto", label: "Contact" },
+    { path: "/servicios", label: "Services" },
     { path: "/about", label: "About" },
-    { path: "/proyectos", label: "Proyectos" },
+    { path: "/proyectos", label: "Projects" },
   ];
 
   return (
