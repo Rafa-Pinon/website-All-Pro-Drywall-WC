@@ -1,4 +1,3 @@
-/* Estilos del encabezado */
 .parte-arriba {
   display: flex;
   justify-content: space-between;
@@ -33,7 +32,7 @@
   background-color: goldenrod;
 }
 
-/* Estilos de la sección de servicios */
+
 .servicios-container {
   padding: 3rem 2rem;
   background-color: #f9f9f9;
@@ -93,7 +92,7 @@
   line-height: 1.8;
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
   .servicio-item {
     flex-direction: column !important;

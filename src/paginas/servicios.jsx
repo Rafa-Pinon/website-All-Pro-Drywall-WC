@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Servicios.css"; // Asegúrate de que el archivo CSS esté en el mismo directorio
+import "./Servicios.css";
 import logo from "../assets/img/logo.png";
 import Footer from "../componentes/Footer";
 import dh from "../assets/imagenes/dh.jpeg";
@@ -60,7 +60,6 @@ const Servicios = () => {
 
   return (
     <div>
-      {/* Encabezado */}
       <div className="parte-arriba">
         <div className="logo">
           <img src={logo} alt="Logo" className="milogo" />
@@ -81,7 +80,6 @@ const Servicios = () => {
         </div>
       </div>
 
-      {/* Sección de servicios */}
       <div className="servicios-container">
         <h1 className="servicios-title">Our Services</h1>
         <div className="servicios-list">

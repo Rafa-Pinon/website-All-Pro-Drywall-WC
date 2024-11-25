@@ -120,12 +120,3 @@
 .formulario-container .send:active {
   transform: scale(0.95);
 }
-
-
-footer {
-  margin-top: 60px;
-  background-color: #a0002a;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
