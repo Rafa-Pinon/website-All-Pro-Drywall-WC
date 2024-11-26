@@ -1,13 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "../componentes/Header";
 import Footer from "../componentes/Footer";
 import ImageSlider from "../componentes/imagenes";
 import "../styles/home.css";
 
 function Home() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = (scrollPosition / totalHeight) * 100;
+      document.querySelector(".scroll-indicator").style.width = `${progress}%`;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="home-container">
       <Header />
+      <div className="scroll-indicator"></div>
       <main>
         <section className="welcome">
           <h1 className="company-name">All-Pro Drywall LLC</h1>
@@ -40,6 +54,21 @@ function Home() {
             about creating lasting impressions through our work and fostering
             trust through our dedication to quality and service.
           </p>
+        </section>
+        <section className="testimonials">
+          <h2>What Our Clients Say</h2>
+          <div className="testimonial-slider">
+            <p>"All-Pro Drywall is simply the best! Highly recommended!"</p>
+            <p>"Great quality and on-time delivery. Couldn't be happier!"</p>
+            <p>
+              "Amazing attention to detail. Will definitely hire them again."
+            </p>
+          </div>
+        </section>
+        <section className="cta">
+          <Link to="/contacto">
+            <button className="btn-cta">Get a Free Quote</button>
+          </Link>
         </section>
       </main>
       <Footer />
