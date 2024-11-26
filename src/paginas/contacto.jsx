@@ -4,6 +4,7 @@ import "./contacto.css";
 import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
 
+import team from "../assets/imagenes/team.jpeg";
 function Contacto() {
   const navigate = useNavigate();
 
@@ -28,14 +29,15 @@ function Contacto() {
   return (
     <div className="todo">
       <Header />
-      <div className="centro">
-        <div className="comentarios">
-          <h1>Contact Us</h1>
-          <div className="highlight">
-            <h2>"What can we build for you"</h2>
-          </div>
-        </div>
 
+      <div className="comentarios">
+        <h1 className="titulo">Contact Us</h1>
+        <div className="highlight">
+          <h2>"What can we build for you"</h2>
+        </div>
+      </div>
+
+      <div className="centro">
         <form
           name="contacto"
           method="POST"
@@ -77,7 +79,18 @@ function Contacto() {
             Send
           </button>
         </form>
+
+        <div className="lado-derecho">
+          <h2>Let's Build Together</h2>
+          <p>
+            Have a project in mind? We are here to bring your ideas to life.
+            Feel free to contact us, and let's start building something amazing
+            together.
+          </p>
+          <img src={team} alt="Inspiration" />
+        </div>
       </div>
+
       <Footer />
     </div>
   );
