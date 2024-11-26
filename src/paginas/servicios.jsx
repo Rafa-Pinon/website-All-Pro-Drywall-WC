@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Servicios.css";
+import "./servicios.css";
 import Footer from "../componentes/Footer";
 import dh from "../assets/imagenes/dh.jpeg";
 import tab from "../assets/imagenes/tab.jpeg";
