@@ -1,11 +1,12 @@
-
 body, html {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
 }
-
 
 .todo {
   display: flex;
@@ -15,38 +16,14 @@ body, html {
   overflow-x: hidden;
 }
 
-
-.parte-arriba {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 20px;
-  background-color: #fff;
-  box-sizing: border-box;
-}
-
-
-.logo img {
-  height: 70px;
-}
-
-
-.botones button {
-  margin-left: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-
 .centro {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 40px 0;
+  padding: 60px 20px;
   box-sizing: border-box;
+  background: linear-gradient(to right, #e8f0ff, #ffffff);
 }
-
 
 .about-container {
   display: flex;
@@ -55,6 +32,11 @@ body, html {
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
+  gap: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 .about-text {
@@ -62,27 +44,26 @@ body, html {
   padding-right: 20px;
 }
 
-.dos {
-  width: 50%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-
-
 .about-text h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  color: #002855;
   margin-bottom: 20px;
+  border-left: 4px solid #ff4500;
+  padding-left: 10px;
 }
 
 .about-text p {
   font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 10px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #555;
 }
 
+.about-text p:last-child {
+  font-weight: bold;
+  color: #002855;
+}
 
 .about-image {
   width: 50%;
@@ -92,24 +73,12 @@ body, html {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
 }
 
-
-.footer {
-  width: 100%;
-  background-color: black;
-  padding: 20px 0;
-  text-align: center;
+.about-image img:hover {
+  transform: scale(1.05);
 }
-
-
-.parte-arriba {
-  height: auto;
-  padding: 20px;
-}
-
-.logo img {
-  height: 70px;
-}
-
