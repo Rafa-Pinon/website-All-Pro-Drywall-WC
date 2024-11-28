@@ -1,51 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../componentes/Footer";
-import logo from "../assets/img/logo.png";
+import Header from "../componentes/Header";
 import dos from "../assets/imagenes/dos.jpg";
 import "./about.css";
 
 const About = () => {
   const navigate = useNavigate();
-
-  const navigateHome = () => {
-    navigate("/");
-  };
-
-  const navigateToContacto = () => {
-    navigate("/contacto");
-  };
-  const navigateToProyectos = () => {
-    navigate("/proyectos");
-  };
-
-  const navigateToServicios = () => {
-    navigate("/servicios");
-  };
-
   return (
     <div className="todo">
-      {/* Header */}
-      <div className="parte-arriba">
-        <div className="logo">
-          <img src={logo} alt="Logo" className="milogo" />
-        </div>
-        <div className="botones">
-          <button className="btncontacto" onClick={navigateHome}>
-            Home
-          </button>
-          <button className="btnservicio" onClick={navigateToServicios}>
-            Servicios
-          </button>
-          <button className="btnproyectos" onClick={navigateToProyectos}>
-            Proyectos
-          </button>
-          <button className="btncontacto" onClick={navigateToContacto}>
-            Contact Us
-          </button>
-        </div>
-      </div>
-
+      <Header />
       <div className="centro">
         <div className="about-container">
           <div className="about-text">
