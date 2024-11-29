@@ -1,9 +1,10 @@
-html, body {
+ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-y: auto;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  background: #f2f4f8;
 }
 
 .home-container {
@@ -12,23 +13,24 @@ html, body {
   align-items: center;
   min-height: 100vh;
   width: 100%;
-  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
 }
 
 main {
   flex: 1;
-  padding-top: 80px;
-  width: 100%;
+  padding: 20px 5%;
+  max-width: 1200px;
   text-align: center;
-  animation: fadeIn 1s ease-out;
 }
+
 
 .welcome {
   margin: 40px 0;
+  text-align: center;
+  color: white;
 }
 
 .company-name {
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #ffffff;
   font-weight: 900;
   text-transform: uppercase;
@@ -37,14 +39,11 @@ main {
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url('../assets/imagenes/fraccionamiento.jpeg') no-repeat center center/cover;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
-  height: 250px;
+  height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-attachment: fixed;
-  border-bottom: 4px solid #a0002a;
-  transition: background-size 0.3s ease-out;
-  background-size: cover;
+  border-radius: 12px;
 }
 
 .company-motto {
@@ -59,43 +58,39 @@ main {
   border-radius: 12px;
   box-shadow: 0px 8px 15px rgba(160, 0, 42, 0.3);
   animation: fadeIn 1.5s ease-out;
+
+}
+
+.slider {
+  margin: 50px auto;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .mission {
   padding: 30px;
-  background: linear-gradient(to bottom right, #ffffff, #f4f4f4);
+  background: #ffffff;
   border-radius: 12px;
-  max-width: 900px;
+  max-width: 100%;
   margin: 40px auto;
   text-align: center;
-  box-shadow: 0px 8px 20px rgba(160, 0, 42, 0.2);
-  animation: fadeIn 2s ease-out;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .mission h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #a0002a;
   margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .mission p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #555;
   line-height: 1.8;
-  margin: 0 auto;
-  max-width: 700px;
-}
-
-.slider {
-  margin: 40px auto;
-  max-width: 900px;
-  height: 350px;
-  overflow: hidden;
-  border-radius: 15px;
-  animation: fadeIn 2.5s ease-out;
-  box-shadow: 0px 8px 20px rgba(160, 0, 42, 0.3);
+  margin: 10px auto;
 }
 
 .testimonials {
@@ -105,51 +100,74 @@ main {
   max-width: 900px;
   margin: 40px auto;
   box-shadow: 0px 8px 20px rgba(160, 0, 42, 0.3);
+  text-align: center;
 }
-
-.slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  animation: zoomEffect 10s ease-in-out infinite;
-}
-
 
 .testimonials h2 {
   font-size: 2rem;
-  color: #a0002a;
+  color: #002855;
   margin-bottom: 20px;
 }
 
-.testimonial-slider p {
+.testimonial-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #a0002a;
+}
+
+.testimonial-text {
   font-size: 1.2rem;
   color: #555;
   font-style: italic;
-  margin: 15px 0;
+  margin: 10px 0;
   line-height: 1.6;
-  animation: fadeIn 2s ease-out;
 }
 
+.testimonial-name {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #002855;
+  margin-top: 5px;
+}
+
+
 .cta {
-  margin: 30px;
+  margin: 40px auto;
 }
 
 .btn-cta {
   background: linear-gradient(to right, #a0002a, #d0003b);
+  padding: 12px 30px;
   color: white;
-  padding: 15px 35px;
-  font-size: 1.4rem;
-  font-weight: bold;
+  border-radius: 8px;
   border: none;
-  border-radius: 12px;
-  cursor: pointer;
+  font-size: 1.2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 4px 12px rgba(208, 0, 59, 0.3);
 }
 
 .btn-cta:hover {
   transform: scale(1.1);
-  box-shadow: 0px 8px 20px rgba(208, 0, 59, 0.5);
+  box-shadow: 0px 4px 12px rgba(208, 0, 59, 0.3);
 }
 
 .scroll-indicator {
@@ -161,24 +179,4 @@ main {
   background: linear-gradient(to right, #a0002a, #d0003b);
   z-index: 10;
   transition: width 0.25s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoomEffect {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
 }

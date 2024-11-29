@@ -4,6 +4,7 @@ import Header from "../componentes/Header";
 import Footer from "../componentes/Footer";
 import ImageSlider from "../componentes/imagenes";
 import "../styles/home.css";
+import dh from "../assets/imagenes/dh.jpeg";
 
 function Home() {
   useEffect(() => {
@@ -58,13 +59,30 @@ function Home() {
         <section className="testimonials">
           <h2>What Our Clients Say</h2>
           <div className="testimonial-slider">
-            <p>"All-Pro Drywall is simply the best! Highly recommended!"</p>
-            <p>"Great quality and on-time delivery. Couldn't be happier!"</p>
-            <p>
-              "Amazing attention to detail. Will definitely hire them again."
-            </p>
+            <div className="testimonial">
+              <img src={dh} alt="Client 1" className="testimonial-photo" />
+              <p className="testimonial-text">
+                "All-Pro Drywall is simply the best! Highly recommended!"
+              </p>
+              <p className="testimonial-name">- John B</p>
+            </div>
+            <div className="testimonial">
+              <img src={dh} alt="Client 2" className="testimonial-photo" />
+              <p className="testimonial-text">
+                "Great quality and on-time delivery. Couldn't be happier!"
+              </p>
+              <p className="testimonial-name">- Jane Smith</p>
+            </div>
+            <div className="testimonial">
+              <img src={dh} alt="Client 3" className="testimonial-photo" />
+              <p className="testimonial-text">
+                "Amazing attention to detail. Will definitely hire them again."
+              </p>
+              <p className="testimonial-name">- Alex Johnson</p>
+            </div>
           </div>
         </section>
+
         <section className="cta">
           <Link to="/contacto">
             <button className="btn-cta">Get a Free Quote</button>
