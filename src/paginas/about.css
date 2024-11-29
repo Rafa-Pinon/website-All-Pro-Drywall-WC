@@ -1,26 +1,17 @@
-body, html {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  color: #333;
-  background-color: #f9f9f9;
-}
-
 .todo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
-  overflow-x: hidden;
+  min-height: 100vh;
+  justify-content: flex-start;
+  padding-top: 100px;
 }
 
 .centro {
-  width: 100%;
+  flex: 1;
   display: flex;
   justify-content: center;
-  padding: 60px 20px;
+  align-items: flex-start;
+  padding: 20px;
   box-sizing: border-box;
   background: linear-gradient(to right, #e8f0ff, #ffffff);
 }
@@ -28,8 +19,8 @@ body, html {
 .about-container {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
+  width: 80%;
+  max-width: 1000px;
   margin: 0 auto;
   align-items: center;
   gap: 20px;
@@ -37,6 +28,8 @@ body, html {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   background-color: #ffffff;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .about-text {
@@ -45,7 +38,7 @@ body, html {
 }
 
 .about-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   color: #002855;
   margin-bottom: 20px;
@@ -54,8 +47,8 @@ body, html {
 }
 
 .about-text p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.6;
   margin-bottom: 20px;
   color: #555;
 }
