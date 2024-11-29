@@ -135,10 +135,3 @@
   background: linear-gradient(135deg, #a0002a, #ff4e6e);
   border-radius: 5px;
 }
-
-.titulo:hover {
-  color: #ff4e6e;
-  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.12);
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-}
