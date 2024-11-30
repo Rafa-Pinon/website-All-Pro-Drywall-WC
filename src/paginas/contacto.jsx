@@ -5,6 +5,7 @@ import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
 
 import team from "../assets/imagenes/team.jpeg";
+
 function Contacto() {
   const navigate = useNavigate();
 

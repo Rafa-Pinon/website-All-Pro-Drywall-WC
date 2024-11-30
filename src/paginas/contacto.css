@@ -1,21 +1,4 @@
-.centro {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  padding: 80px;
-  background: linear-gradient(135deg, #f7f7f7, #ffffff);
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 1200px;
-  margin-bottom: 80px;
-  height: 600px;
-}
-
-
-.todo {
+  .todo {
   font-family: "Roboto", Arial, sans-serif;
   min-height: 100vh;
   display: flex;
@@ -26,6 +9,21 @@
   overflow-y: auto;
   background: linear-gradient(135deg, #ececec, #ffffff);
   padding-top: 80px;
+  overflow-x: hidden;
+}
+.centro {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 80px;
+  background: linear-gradient(135deg, #f7f7f7, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+  margin-bottom: 80px;
 }
 
 .titulo {
@@ -37,7 +35,6 @@
   letter-spacing: 1.5px;
   margin: 60px 0 40px;
 }
-
 
 .lado-derecho img {
   margin-top: -30px;
@@ -93,18 +90,31 @@
   min-height: 150px;
 }
 
+
+
 .formulario-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: 20px;
-  width: 100%;
+  flex: 1;
   max-width: 500px;
-  padding: 30px;
-  background: linear-gradient(135deg, #ffffff, #f8f8f8);
-  border: 2px solid #d0003b;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(208, 0, 59, 0.1);
-  position: relative;
+  min-width: 300px;
+}
+
+.formulario-container .send {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #a0002a, #ff4e6e);
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  box-shadow: 0 8px 15px rgba(208, 0, 59, 0.2);
+  align-self: center;
+  margin-top: 370px;
 }
 
 .formulario-container .send:hover {
@@ -116,12 +126,23 @@
   transform: scale(0.98);
 }
 
+
 .lado-derecho {
+  flex: 1;
+  max-width: 500px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
-  max-width: 500px;
+}
+
+.lado-derecho img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .lado-derecho h2 {
@@ -136,3 +157,6 @@
   line-height: 1.6;
   text-align: justify;
 }
+
+
+
