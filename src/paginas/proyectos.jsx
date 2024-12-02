@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/proyectos.css";
+import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
 import uno from "../../src/assets/imagenes/uno.jpg";
 import dos from "../../src/assets/imagenes/dos.jpg";
@@ -37,7 +38,7 @@ function Proyectos() {
         <ImagenesProyectosSlider imagenes={imagenesdos} />
       </div>
       <div className="foter">
-        <h1>foter</h1>
+        <Footer />
       </div>
     </div>
   );
