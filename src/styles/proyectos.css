@@ -28,9 +28,10 @@
 }
 
 .slider img {
-  width: 100%;
+  width: auto;
   height: auto;
   border-radius: 10px;
+  zoom: 80%;
 }
 
 button {
@@ -51,9 +52,27 @@ button:hover {
 }
 
 .prev {
-  left: 10px;
+
+  left: 20px;
 }
 
 .next {
   right: 10px;
 }
+.frase  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-top: -3%;
+  font-weight: bold;
+}
+.temaslider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
