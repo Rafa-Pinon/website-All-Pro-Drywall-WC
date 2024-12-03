@@ -4,6 +4,7 @@
   min-height: 100vh;
   justify-content: flex-start;
   padding-top: 100px;
+  overflow-x: hidden;
 }
 
 .centro {
@@ -14,12 +15,14 @@
   padding: 20px;
   box-sizing: border-box;
   background: linear-gradient(to right, #e8f0ff, #ffffff);
+  overflow-x: hidden;
 }
+
 
 .about-container {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
   align-items: center;
@@ -74,4 +77,61 @@
 
 .about-image img:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .about-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .about-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .about-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+
+  .about-image img {
+    box-shadow: none;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
