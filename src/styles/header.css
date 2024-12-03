@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .header {
   width: 100%;
   display: flex;
@@ -13,12 +19,10 @@
   box-sizing: border-box;
 }
 
-
-.header .logo img {
+.logo img {
   height: 60px;
   max-height: 100%;
 }
-
 
 .nav {
   display: flex;
@@ -40,7 +44,6 @@
   color: #a0002a;
 }
 
-/* Mobile Styles */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -75,7 +78,6 @@
   box-shadow: 0px 4px 10px rgba(160, 0, 42, 0.3);
 }
 
-
 @media (max-width: 768px) {
   .nav {
     display: none;
@@ -103,3 +105,4 @@
     box-shadow: none;
   }
 }
+
