@@ -6,6 +6,8 @@
   width: 100%;
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
   gap: 20px;
+  width: 100vw; /* Asegura que ocupe todo el ancho de la ventana */
+  margin-left: 0; /* Resetea márgenes potenciales */
 }
 
 .map-container {
