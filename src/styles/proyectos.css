@@ -1,36 +1,30 @@
-.titulo-proyecto {
-  display: flex;
-  font-size: 350%;
-  color:  #a0002a;
-  margin-top: 4.5%;
-  width: 100%;
-  height: 200px;
-  background-color:white;
-  align-items: center;
-  justify-content: center;
- 
+.proyecto {
+  background-color: rgb(247, 243, 243);
 }
+
+
 .titulo-proyecto p {
   border-bottom: 3px solid #a0002a;
 }
 
-
-.fotos {
-  margin-top: 3%;
-}
 .slider {
-  position: relative;
-  width: 80%;
-  max-width: 50%;
-  height: 700px;
-  margin: 0 auto;
-  text-align: center;
+ position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px; 
+    height: 500px; 
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
 }
 
 .slider img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
+    height: 100%;
+    object-fit: cover; 
+    filter: grayscale(20%); 
+    transition: transform 1s ease, filter 0.5s ease; 
+
 }
 
 button {
@@ -56,4 +50,48 @@ button:hover {
 
 .next {
   right: 10px;
+}
+.tipodepryecto {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: -80PX;
+}
+.tipodepryecto p {
+  font-size: 30px;
+  font-weight: bold;
+  color:  #a0002a;
+  border-bottom: 3px solid black;
+ }
+
+.pinterior {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+ 
+}
+
+.pinterior p {
+  font-size: 30px;
+  font-weight: bold;
+  color:  #a0002a;
+  border-bottom: 3px solid black;
+ }
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.titulo-proyecto {
+  color:  #a0002a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+   background-size: cover; 
+}
+
+.titulo-proyecto p {
+  margin-top: 32%;
+  position: relative;
+  z-index: 2; 
 }
