@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "./contacto.css";
 import Footer from "../componentes/Footer";
 import Header from "../componentes/Header";
-
-import team from "../assets/imagenes/team.jpeg";
+import dos from "../assets/imagenes/dos.jpg";
+import uno from "../assets/imagenes/uno.jpg";
+import frac from "../assets/imagenes/frac.avif";
 
 function Contacto() {
   const navigate = useNavigate();
@@ -15,6 +16,9 @@ function Contacto() {
     mensaje: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [progress, setProgress] = useState(0);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -24,7 +28,20 @@ function Contacto() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    setIsSubmitting(true);
+
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev >= 100) {
+          clearInterval(interval);
+          setIsSubmitting(false);
+          setProgress(0);
+          alert("Form submitted successfully!");
+          return prev;
+        }
+        return prev + 10;
+      });
+    }, 300);
   };
 
   return (
@@ -33,8 +50,10 @@ function Contacto() {
 
       <div className="comentarios">
         <h1 className="titulo">Contact Us</h1>
-        <div className="highlight">
-          <h2>"What can we build for you"</h2>
+        <div className="cta-banner">
+          <p>
+            "Let's build your dreams together – the first step starts here!"
+          </p>
         </div>
       </div>
 
@@ -55,6 +74,7 @@ function Contacto() {
               value={formData.nombre}
               onChange={handleChange}
               placeholder="Enter your name"
+              required
             />
           </div>
           <div>
@@ -65,6 +85,7 @@ function Contacto() {
               value={formData.email}
               onChange={handleChange}
               placeholder="Enter your email address"
+              required
             />
           </div>
           <div>
@@ -74,22 +95,65 @@ function Contacto() {
               value={formData.mensaje}
               onChange={handleChange}
               placeholder="Write your message here"
+              required
             ></textarea>
           </div>
-          <button className="send" type="submit">
-            Send
+          {isSubmitting && (
+            <div className="progress-bar">
+              <div style={{ width: `${progress}%` }}></div>
+            </div>
+          )}
+          <button className="send" type="submit" disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Send"}
           </button>
         </form>
+      </div>
 
-        <div className="lado-derecho">
-          <h2>Let's Build Together</h2>
-          <p>
-            Have a project in mind? We are here to bring your ideas to life.
-            Feel free to contact us, and let's start building something amazing
-            together.
-          </p>
-          <img src={team} alt="Inspiration" />
-        </div>
+      <div className="extras">
+        <section className="testimonials">
+          <h2>What Our Clients Say</h2>
+          <div className="testimonial-item">
+            <p>
+              "The best service ever! My dream home is now a reality thanks to
+              this amazing team."
+            </p>
+            <span>- Sarah J.</span>
+          </div>
+          <div className="testimonial-item">
+            <p>
+              "Professional, efficient, and reliable. Highly recommended for any
+              construction project!"
+            </p>
+            <span>- Mark T.</span>
+          </div>
+        </section>
+
+        <section className="gallery">
+          <h2>Our Work in Action</h2>
+          <div className="gallery-grid">
+            <img src={uno} alt="Project 1" />
+            <img src={dos} alt="Project 2" />
+            <img src={frac} alt="Project 3" />
+          </div>
+        </section>
+
+        <section className="achievements">
+          <h2>Our Achievements</h2>
+          <div className="stats">
+            <div>
+              <h3>500+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div>
+              <h3>300+</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div>
+              <h3>100%</h3>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
+        </section>
       </div>
 
       <Footer />
