@@ -134,7 +134,20 @@ function Contacto() {
             <img src={uno} alt="Project 1" />
             <img src={dos} alt="Project 2" />
             <img src={frac} alt="Project 3" />
+            <img src={uno} alt="Project 1" />
+            <img src={dos} alt="Project 2" />
+            <img src={frac} alt="Project 3" />
+            <img src={frac} alt="Project 3" />
+            <img src={uno} alt="Project 1" />
+            <img src={dos} alt="Project 2" />
+            <img src={frac} alt="Project 3" />
+            <img src={frac} alt="Project 3" />
+            <img src={uno} alt="Project 1" />
+            <img src={dos} alt="Project 2" />
+            <img src={frac} alt="Project 3" />
           </div>
+
+          <div className="scroll-message">Scroll to the side to see more</div>
         </section>
 
         <section className="achievements">
