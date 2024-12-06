@@ -1,32 +1,42 @@
+
 .proyecto {
   background-color: rgb(247, 243, 243);
 }
 
-
 .titulo-proyecto p {
   border-bottom: 3px solid #a0002a;
+  animation: fadeIn 1s ease-out;
 }
 
+/* Estilos del slider */
 .slider {
- position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 1200px; 
-    height: 500px; 
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .slider img {
   width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    filter: grayscale(20%); 
-    transition: transform 1s ease, filter 0.5s ease; 
-
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: transform 1s ease, filter 0.5s ease, opacity 1s ease-in-out;
 }
 
+.slider img.active {
+  opacity: 1;
+}
+
+.slider img.inactive {
+  opacity: 0;
+}
+
+/* Estilos de los botones del slider */
 button {
   position: absolute;
   top: 50%;
@@ -54,54 +64,48 @@ button:hover {
 .next {
   right: 10px;
 }
-.tipodepryecto {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin-top: -80PX;
-}
-.tipodepryecto p {
-  font-size: 30px;
-  font-weight: bold;
-  color:  #a0002a;
-  border-bottom: 3px solid black;
- }
 
+/* Estilos para títulos */
+.tipodepryecto,
 .pinterior {
   display: flex;
   text-align: center;
   justify-content: center;
- 
+  animation: slideIn 1s ease-out;
 }
 
+.tipodepryecto p,
 .pinterior p {
   font-size: 30px;
   font-weight: bold;
-  color:  #a0002a;
+  color: #a0002a;
   border-bottom: 3px solid black;
- }
+}
 
 .titulo {
   display: flex;
   align-items: center;
   justify-content: center;
- 
 }
+
 .titulo-proyecto {
-  color:  #a0002a;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
-   background-size: cover; 
+  color: #a0002a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  animation: slideIn 1s ease-out;
 }
 
 .titulo-proyecto p {
   margin-top: 32%;
   position: relative;
-  z-index: 2; 
+  z-index: 2;
 }
+
+/* Estilos de los sliders de imágenes */
 .slideruno, .sliderdos {
   position: relative;
   display: flex;
- overflow: hidden;
+  overflow: hidden;
 }
 
 .slideruno img, .sliderdos img {
@@ -114,3 +118,54 @@ button:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Animaciones */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Estilos responsivos para teléfonos */
+@media (max-width: 768px) {
+  .slider {
+    height: 300px; /* Reduce la altura del slider para pantallas pequeñas */
+  }
+
+  .tipodepryecto p, .pinterior p {
+    font-size: 20px; /* Reduce el tamaño de la fuente para pantallas pequeñas */
+  }
+
+  .titulo-proyecto p {
+    font-size: 24px; /* Ajusta el tamaño de los títulos para dispositivos pequeños */
+    margin-top: 20%;
+  }
+
+  .slider img {
+    filter: grayscale(50%); /* Aumenta el filtro de escala de grises en dispositivos pequeños */
+  }
+
+  button {
+    font-size: 14px; /* Reduce el tamaño de los botones para pantallas pequeñas */
+    padding: 8px;
+  }
+
+  /* Botones más accesibles en pantallas pequeñas */
+  .prev, .next {
+    top: 45%;
+    padding: 8px;
+  }
+}
