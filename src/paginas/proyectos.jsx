@@ -35,7 +35,7 @@ function Proyectos() {
 
       <div className="sliderinteriores">
         <div className="pinterior">
-          <p>Interiors</p>
+          <p>Level 5 Finish Custom Homes</p>
         </div>
         <div className="sliderdos">
           <ImagenesProyectosSlider images={interiores} />

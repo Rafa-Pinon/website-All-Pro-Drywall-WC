@@ -38,10 +38,13 @@ button {
   font-size: 18px;
   cursor: pointer;
   z-index: 2;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #a0002a;
+  opacity: 1;
 }
 
 .prev {
@@ -95,3 +98,19 @@ button:hover {
   position: relative;
   z-index: 2; 
 }
+.slideruno, .sliderdos {
+  position: relative;
+  display: flex;
+ overflow: hidden;
+}
+
+.slideruno img, .sliderdos img {
+  width: 100%;
+  transition: box-shadow 0.5s ease;
+}
+
+.slideruno img.active, .sliderdos img.active {
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
