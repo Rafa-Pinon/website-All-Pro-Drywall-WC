@@ -11,6 +11,7 @@
   padding-top: 80px;
   overflow-x: hidden;
 }
+
 .centro {
   display: flex;
   flex-wrap: wrap;
@@ -157,6 +158,3 @@
   line-height: 1.6;
   text-align: justify;
 }
-
-
-

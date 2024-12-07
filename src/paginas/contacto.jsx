@@ -81,15 +81,6 @@ function Contacto() {
           </button>
         </form>
 
-        <div className="lado-derecho">
-          <h2>Let's Build Together</h2>
-          <p>
-            Have a project in mind? We are here to bring your ideas to life.
-            Feel free to contact us, and let's start building something amazing
-            together.
-          </p>
-          <img src={team} alt="Inspiration" />
-        </div>
       </div>
 
       <Footer />
