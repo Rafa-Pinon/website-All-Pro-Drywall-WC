@@ -37,7 +37,6 @@ function Contacto() {
           <h2>"What can we build for you"</h2>
         </div>
       </div>
-
       <div className="centro">
         <form
           name="contacto"
