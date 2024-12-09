@@ -1,3 +1,181 @@
+// import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+// import "./contacto.css";
+// import Footer from "../componentes/Footer";
+// import Header from "../componentes/Header";
+// import dos from "../assets/imagenes/dos.jpg";
+// import uno from "../assets/imagenes/uno.jpg";
+// import frac from "../assets/imagenes/frac.avif";
+
+// function Contacto() {
+//   const navigate = useNavigate();
+
+//   const [formData, setFormData] = useState({
+//     nombre: "",
+//     email: "",
+//     mensaje: "",
+//   });
+
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+//   const [progress, setProgress] = useState(0);
+
+//   const handleChange = (e) => {
+//     setFormData({
+//       ...formData,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
+
+//     const interval = setInterval(() => {
+//       setProgress((prev) => {
+//         if (prev >= 100) {
+//           clearInterval(interval);
+//           setIsSubmitting(false);
+//           setProgress(0);
+//           alert("Form submitted successfully!");
+//           return prev;
+//         }
+//         return prev + 10;
+//       });
+//     }, 300);
+//   };
+
+//   return (
+//     <div className="todo">
+//       <Header />
+
+//       <div className="comentarios">
+//         <h1 className="titulo">Contact Us</h1>
+//         <div className="cta-banner">
+//           <p>
+//             "Let's build your dreams together – the first step starts here!"
+//           </p>
+//         </div>
+//       </div>
+
+//       <div className="centro">
+//         <form
+//           name="contacto"
+//           method="POST"
+//           data-netlify="true"
+//           onSubmit={handleSubmit}
+//           className="formulario-container"
+//         >
+//           <input type="hidden" name="form-name" value="contacto" />
+//           <div>
+//             <label>Name:</label>
+//             <input
+//               type="text"
+//               name="nombre"
+//               value={formData.nombre}
+//               onChange={handleChange}
+//               placeholder="Enter your name"
+//               required
+//             />
+//           </div>
+//           <div>
+//             <label>Email:</label>
+//             <input
+//               type="email"
+//               name="email"
+//               value={formData.email}
+//               onChange={handleChange}
+//               placeholder="Enter your email address"
+//               required
+//             />
+//           </div>
+//           <div>
+//             <label>Message:</label>
+//             <textarea
+//               name="mensaje"
+//               value={formData.mensaje}
+//               onChange={handleChange}
+//               placeholder="Write your message here"
+//               required
+//             ></textarea>
+//           </div>
+//           {isSubmitting && (
+//             <div className="progress-bar">
+//               <div style={{ width: `${progress}%` }}></div>
+//             </div>
+//           )}
+//           <button className="send" type="submit" disabled={isSubmitting}>
+//             {isSubmitting ? "Sending..." : "Send"}
+//           </button>
+//         </form>
+//       </div>
+
+//       <div className="extras">
+//         <section className="testimonials">
+//           <h2>What Our Clients Say</h2>
+//           <div className="testimonial-item">
+//             <p>
+//               "The best service ever! My dream home is now a reality thanks to
+//               this amazing team."
+//             </p>
+//             <span>- Sarah J.</span>
+//           </div>
+//           <div className="testimonial-item">
+//             <p>
+//               "Professional, efficient, and reliable. Highly recommended for any
+//               construction project!"
+//             </p>
+//             <span>- Mark T.</span>
+//           </div>
+//         </section>
+
+//         <section className="gallery">
+//           <h2>Our Work in Action</h2>
+//           <div className="gallery-grid">
+//             <img src={uno} alt="Project 1" />
+//             <img src={dos} alt="Project 2" />
+//             <img src={frac} alt="Project 3" />
+//             <img src={uno} alt="Project 1" />
+//             <img src={dos} alt="Project 2" />
+//             <img src={frac} alt="Project 3" />
+//             <img src={frac} alt="Project 3" />
+//             <img src={uno} alt="Project 1" />
+//             <img src={dos} alt="Project 2" />
+//             <img src={frac} alt="Project 3" />
+//             <img src={frac} alt="Project 3" />
+//             <img src={uno} alt="Project 1" />
+//             <img src={dos} alt="Project 2" />
+//             <img src={frac} alt="Project 3" />
+//           </div>
+
+//           <div className="scroll-message">Scroll to the side to see more</div>
+//         </section>
+
+//         <section className="achievements">
+//           <h2>Our Achievements</h2>
+//           <div className="stats">
+//             <div>
+//               <h3>500+</h3>
+//               <p>Projects Completed</p>
+//             </div>
+//             <div>
+//               <h3>300+</h3>
+//               <p>Happy Clients</p>
+//             </div>
+//             <div>
+//               <h3>100%</h3>
+//               <p>Client Satisfaction</p>
+//             </div>
+//           </div>
+//         </section>
+//       </div>
+
+//       <Footer />
+//     </div>
+//   );
+// }
+
+// export default Contacto;
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./contacto.css";
@@ -17,7 +195,7 @@ function Contacto() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [formStatus, setFormStatus] = useState(""); // 'sending', 'sent', or ''
 
   const handleChange = (e) => {
     setFormData({
@@ -26,22 +204,29 @@ function Contacto() {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setFormStatus("sending");
 
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setIsSubmitting(false);
-          setProgress(0);
-          alert("Form submitted successfully!");
-          return prev;
-        }
-        return prev + 10;
+    const formDataEncoded = new URLSearchParams(formData).toString();
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formDataEncoded,
       });
-    }, 300);
+
+      setFormStatus("sent");
+      setFormData({ nombre: "", email: "", mensaje: "" }); // Limpia el formulario
+      setTimeout(() => setFormStatus(""), 3000); // Limpia el mensaje tras 3 segundos
+    } catch (error) {
+      alert("Hubo un error al enviar el formulario.");
+      setFormStatus(""); // Restablece el estado en caso de error
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -98,14 +283,12 @@ function Contacto() {
               required
             ></textarea>
           </div>
-          {isSubmitting && (
-            <div className="progress-bar">
-              <div style={{ width: `${progress}%` }}></div>
-            </div>
-          )}
           <button className="send" type="submit" disabled={isSubmitting}>
             {isSubmitting ? "Sending..." : "Send"}
           </button>
+          {formStatus === "sent" && (
+            <p className="success-message">"Form submitted successfully!"</p>
+          )}
         </form>
       </div>
 
