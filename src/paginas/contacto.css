@@ -13,7 +13,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background: linear-gradient(135deg, #ececec, #ffffff);
-  align-items: center;
+  align-items: stretch;
   justify-content: flex-start;
 }
 
@@ -27,7 +27,6 @@ body {
   background: linear-gradient(135deg, #ececec, #ffffff);
   box-sizing: border-box;
 }
-
 
 .titulo {
   position: relative;
@@ -53,7 +52,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-
 
 @media (min-width: 1024px) {
   .titulo {
