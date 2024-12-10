@@ -7,7 +7,6 @@
   overflow-x: hidden;
   background: linear-gradient(to bottom, #ffffff, #e8f0ff);
 }
-
 .centro {
   flex: 1;
   display: flex;
@@ -16,7 +15,6 @@
   padding: 20px;
   box-sizing: border-box;
 }
-
 .about-container {
   display: flex;
   flex-direction: column;
