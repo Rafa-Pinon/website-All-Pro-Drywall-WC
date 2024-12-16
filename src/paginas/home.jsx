@@ -35,10 +35,29 @@ function Home() {
 
         <section className="projects">
           <h2>Our Recent Projects</h2>
+          <p className="scroll-message">
+            Scroll to the side to see more projects!
+          </p>
           <div className="project-gallery">
             <div className="project-card">
               <img src={residential} alt="Project 1" />
               <p>Residential Wall Finishing</p>
+            </div>
+            <div className="project-card">
+              <img src={commercial} alt="Project 2" />
+              <p>Commercial Interior Design</p>
+            </div>
+            <div className="project-card">
+              <img src={commercial} alt="Project 2" />
+              <p>Commercial Interior Design</p>
+            </div>
+            <div className="project-card">
+              <img src={commercial} alt="Project 2" />
+              <p>Commercial Interior Design</p>
+            </div>
+            <div className="project-card">
+              <img src={commercial} alt="Project 2" />
+              <p>Commercial Interior Design</p>
             </div>
             <div className="project-card">
               <img src={commercial} alt="Project 2" />
@@ -90,38 +109,24 @@ function Home() {
             </div>
           </div>
         </section>
+
         <section className="testimonials">
           <h2>What Our Clients Say</h2>
           <div className="testimonial-slider">
             <div className="testimonial">
-              <img src={dh} alt="Client 1" className="testimonial-photo" />
-              <p className="testimonial-text">
-                "Amazing attention to detail. Will definitely hire them again."
-              </p>
-              <p className="testimonial-name">- Alex Johnson</p>
+              <img src={dh} alt="Client 1" />
+              <p>"Amazing attention to detail."</p>
+              <p>- Alex Johnson</p>
             </div>
             <div className="testimonial">
-              <img
-                src={residential}
-                alt="Client 2"
-                className="testimonial-photo"
-              />
-              <p className="testimonial-text">
-                "Great service and excellent communication throughout the
-                project!"
-              </p>
-              <p className="testimonial-name">- Sarah Lee</p>
+              <img src={residential} alt="Client 2" />
+              <p>"Great service and communication."</p>
+              <p>- Sarah Lee</p>
             </div>
             <div className="testimonial">
-              <img
-                src={commercial}
-                alt="Client 3"
-                className="testimonial-photo"
-              />
-              <p className="testimonial-text">
-                "I am very pleased with the professionalism and quality."
-              </p>
-              <p className="testimonial-name">- James Carter</p>
+              <img src={commercial} alt="Client 3" />
+              <p>"Excellent professionalism and quality."</p>
+              <p>- James Carter</p>
             </div>
           </div>
         </section>
