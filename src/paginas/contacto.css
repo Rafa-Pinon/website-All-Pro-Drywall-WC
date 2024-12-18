@@ -211,16 +211,18 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 
-  .stats {
+   .stats {
     flex-direction: column;
     gap: 15px;
+    width: calc(100% - 40px);
+    max-width: 1200px;
+    box-sizing: border-box;
   }
 
   .stats div {
     width: 100%;
     padding: 15px;
   }
-
   .centro {
     flex-direction: column;
     padding: 20px;
